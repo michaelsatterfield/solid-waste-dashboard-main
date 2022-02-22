@@ -47,6 +47,9 @@ export default function Categories() {
   //   category.name.includes(searchTerm)
   // )
 
+
+
+
   let selectCategory = (row) => {
     setSelectedCategory(row)
     setModalOpen(true)
