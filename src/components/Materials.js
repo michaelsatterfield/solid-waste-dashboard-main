@@ -142,8 +142,9 @@ export default function Materials() {
               <TableBody>
                 {context.materials.map((row) => (
                   <TableRow key={row.id}>
-                    <TableCell component="th" scope="row">
-                      {row.name}
+                    <TableCell component="th" scope="row" >
+                        {/*allows user to add custom HTML in name input*/}
+                        <div dangerouslySetInnerHTML={{__html: row.name}}></div>
                     </TableCell>
                     <TableCell align="left">{row.category_obj.name}</TableCell>
                     <TableCell align="left">
@@ -216,6 +217,7 @@ export default function Materials() {
           <TextField
             label="Name"
             variant="outlined"
+            //todo: change to make input accept html and or links
             value={selectedMaterial.name}
             style={{ width: '80%', marginBottom: '24px' }}
             onChange={(evnt) => {
