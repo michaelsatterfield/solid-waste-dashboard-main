@@ -143,7 +143,8 @@ export default function Categories() {
                 {context.categories.map((row) => (
                   <TableRow key={row.name}>
                     <TableCell component="th" scope="row">
-                      {row.name}
+                        <div dangerouslySetInnerHTML={{__html: row.name}}></div>
+                      {/*{row.name}*/}
                     </TableCell>
                     <TableCell align="left">{row.wasteType}</TableCell>
                     <TableCell align="left">
